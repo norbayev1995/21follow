@@ -19,6 +19,8 @@
                         <button type="submit" class="btn btn-secondary">Follow</button>
                     </form>
                 @endif
+                <h6 class="mt-2">{{ $user->followers->count() }} Followers</h6>
+                <h6>{{ $user->following->count() }} Following</h6>
                 <a href="{{ route('users.index') }}" class="btn btn-secondary mt-3">Назад</a>
             </div>
         </div>

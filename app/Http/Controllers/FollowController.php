@@ -11,8 +11,8 @@ class FollowController extends Controller
     public function follow($id)
     {
         $user = User::find($id);
-        $user->notify(new FollowedNotification(auth()->user()));
         auth()->user()->following()->sync($user->id);
+        $user->notify(new FollowedNotification(auth()->user()));
         return redirect()->back();
     }
 

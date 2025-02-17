@@ -13,9 +13,9 @@ class UserController extends Controller
         return view('users.index', compact('users'));
     }
 
-    public function show($id)
+    public function show($username)
     {
-        $user = User::find($id);
+        $user = User::where('username', $username)->first();
         return view('users.show', compact('user'));
     }
 }

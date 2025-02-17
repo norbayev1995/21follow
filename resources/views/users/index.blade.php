@@ -17,7 +17,7 @@
                             <h5 class="card-title">{{ $user->name }}</h5>
                             <h6 class="card-subtitle text-muted">{{ $user->username }}</h6>
                             <p class="card-text">Email: {{ $user->email }}</p>
-                            <a href="{{ route('users.show', $user->id) }}" class="btn btn-primary">Профиль</a>
+                            <a href="{{ route('users.show', $user->username) }}" class="btn btn-primary">Профиль</a>
                         </div>
                     </div>
                 </div>

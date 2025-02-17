@@ -8,8 +8,8 @@ class NotificationController extends Controller
 {
     public function index()
     {
-        $notifications = auth()->user()->unreadNotifications;
-        return view('notification.index', compact('notifications'));
+        $allNotifications = auth()->user()->notifications;
+        return view('notification.index', compact( 'allNotifications'));
     }
 
     public function read($id)

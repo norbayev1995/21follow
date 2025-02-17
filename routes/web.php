@@ -12,7 +12,7 @@ Route::middleware('auth')->group(function () {
         return redirect()->route('users.index');
     })->name('dashboard');
     Route::get('users', [UserController::class, 'index'])->name('users.index');
-    Route::get('users/show/{id}', [UserController::class, 'show'])->name('users.show');
+    Route::get('users/show/{username}', [UserController::class, 'show'])->name('users.show');
     Route::post('/follows/{id}', [FollowController::class, 'follow'])->name('follow');
     Route::post('/unfollows/{id}', [FollowController::class, 'unfollow'])->name('unfollow');
     Route::get('notifications', [NotificationController::class, 'index'])->name('notifications.index');
